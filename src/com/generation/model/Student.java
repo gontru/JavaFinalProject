@@ -23,7 +23,11 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
+        courses.add(course);
+
         //TODO implement this method
+       // already working in main
+
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,6 +39,13 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+       // if (courseCode == course){
+            //return true;
+        for(Course c : courses){
+            if(c.getCode().equals(courseCode)){
+                return true;
+            }
+        }
         return false;
     }
 
